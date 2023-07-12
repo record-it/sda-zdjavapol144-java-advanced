@@ -3,15 +3,13 @@ package pl.sda.pol144.day1;
 // klasa bazowa, super klasa
 public class Vehicle{
     private int mileage;
-    public int weight;
-    public String name;
+    public final int weight;
+    public final String name;
 
     public Vehicle() {
         weight = 100;
         name = "noname";
     }
-
-
 
     public Vehicle(int mileage, int weight, String name) {
         this.mileage = mileage;

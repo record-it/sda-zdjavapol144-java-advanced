@@ -14,5 +14,6 @@ public class OOPDemo {
         vehicles[0].drive(10);
         System.out.println(vehicles[0].getMileage());
         // kompozycja
+
     }
 }

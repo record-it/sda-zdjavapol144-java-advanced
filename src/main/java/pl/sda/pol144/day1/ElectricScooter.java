@@ -1,13 +1,27 @@
 package pl.sda.pol144.day1;
 
 public class ElectricScooter extends Vehicle{
-    public int capacity;
-    public double energyLevel;
+    public final int capacity;
+    private double energyLevel;
 
     public ElectricScooter() {
         // niejawne wywołanie new Vehicle()
         capacity = 10;
-        get
+    }
+
+    public void recharge(){
+        energyLevel = capacity;
+    }
+
+    @Override
+    public void drive(int distance) {
+        // TODO co powinniśmy zrobić, gdy jest za mało energii na jazdę?
+        super.drive(distance);
+        energyLevel -= distance * 5;
+    }
+
+    public boolean canDrive(int distance){
+        return energyLevel >= distance * 5;
     }
 
     public ElectricScooter(int capacity, String name, int weight) {
