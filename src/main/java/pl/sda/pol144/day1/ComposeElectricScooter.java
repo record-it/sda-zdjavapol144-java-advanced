@@ -1,6 +1,6 @@
 package pl.sda.pol144.day1;
 
-public class ComposeElectricScooter {
+public class ComposeElectricScooter extends Vehicle{
     private final Battery battery;
 
     public ComposeElectricScooter(Battery battery) {
@@ -11,5 +11,11 @@ public class ComposeElectricScooter {
         battery.recharge();
     }
 
+    public int getBatteryCapacity(){
+        return battery.capacity;
+    }
 
+    public Battery getBattery(){
+        return battery;
+    }
 }

@@ -1,5 +1,7 @@
 package pl.sda.pol144.day1;
 
+import java.util.BitSet;
+
 public class OOPDemo {
     public static void main(String[] args) {
         // dziedziczenie
@@ -14,6 +16,20 @@ public class OOPDemo {
         vehicles[0].drive(10);
         System.out.println(vehicles[0].getMileage());
         // kompozycja
-
+        Vehicle scooter = new ComposeElectricScooter(new Battery(20));
+        if (scooter instanceof ComposeElectricScooter){
+            ComposeElectricScooter composeElectricScooter = (ComposeElectricScooter) scooter;
+            System.out.println(composeElectricScooter.getBatteryCapacity());
+            System.out.println("Typ ComposeElectricScooter");
+        }
+        if (scooter instanceof Vehicle){
+            System.out.println("Typ Vehicle");
+        }
+        if (scooter instanceof Object){
+            System.out.println("Typ Object");
+        }
+        // niepoprawne rzutowanie - brak sprawdzenia, czy jest instancją typu Bicycle
+        Bicycle bicycle = (Bicycle) scooter;
+        System.out.println(bicycle.gearNumber);
     }
 }
