@@ -13,7 +13,7 @@ public class Rectangle extends Shape{
 
     @Override
     public void draw() {
-
+        System.out.println("Rectangle: " + getId() + ", " + ", width: " + width +", height: " + height );
     }
 
     @Override
