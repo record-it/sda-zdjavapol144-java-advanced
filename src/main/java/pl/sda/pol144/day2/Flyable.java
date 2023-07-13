@@ -6,4 +6,10 @@ public interface Flyable {
     void fly(int distance);
 
     void land();
+
+    default void travel(int distance){
+        takeOff();
+        fly(distance);
+        land();
+    }
 }
