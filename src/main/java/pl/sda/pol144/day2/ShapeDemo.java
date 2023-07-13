@@ -5,7 +5,7 @@ public class ShapeDemo {
         Shape[] picture = new Shape[5];
         picture[0] = new Rectangle("r1", 20, 30);
         picture[1] = new Rectangle("r2", 10, 30);
-        //picture[2] = new Shape("c1", 15);
+        picture[2] = new Circle("c1", 15);
         drawPicture(picture);
     }
 
