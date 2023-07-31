@@ -1,4 +1,4 @@
-package pl.sda.pol144.day2;
+package pl.sda.pol144.day2.abstractions;
 
 public class Rectangle extends Shape{
     private int width;
@@ -18,6 +18,6 @@ public class Rectangle extends Shape{
 
     @Override
     public double area() {
-        return 0;
+        return width * height;
     }
 }

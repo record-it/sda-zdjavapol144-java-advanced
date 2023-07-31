@@ -1,4 +1,6 @@
-package pl.sda.pol144.day2;
+package pl.sda.pol144.day2.abstractions;
+
+import pl.sda.pol144.day2.interfaces.Circle;
 
 public class ShapeDemo {
     public static void main(String[] args) {

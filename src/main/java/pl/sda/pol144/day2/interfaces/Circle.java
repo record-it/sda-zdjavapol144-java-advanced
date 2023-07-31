@@ -1,8 +1,8 @@
-package pl.sda.pol144.day2;
+package pl.sda.pol144.day2.interfaces;
 
-import java.util.regex.Matcher;
+import pl.sda.pol144.day2.abstractions.Shape;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
     private final int radius;
 
     public Circle(String id, int radius) {

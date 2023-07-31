@@ -1,4 +1,4 @@
-package pl.sda.pol144.day2;
+package pl.sda.pol144.day2.abstractions;
 
 public abstract class Shape {
     private final String id;

@@ -1,4 +1,4 @@
-package pl.sda.pol144.day2.interfaces;
+package pl.sda.pol144.day2.interfaces.example;
 // TODO klasa do poprawy, dorobić logikę dla przepełnienia tablicy!
 public class ArrayHistory implements History{
     private String[] content = new String[100];
@@ -9,7 +9,7 @@ public class ArrayHistory implements History{
     }
 
     @Override
-    public void findAll() {
+    public void printAll() {
         for(var item: content){
             if (item != null) {
                 System.out.println(item);
