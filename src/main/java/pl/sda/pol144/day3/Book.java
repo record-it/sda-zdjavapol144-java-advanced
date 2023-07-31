@@ -7,24 +7,7 @@ public class Book {
 
     private String isbn;
 
-    public Book() {
-    }
-
-    public Book(String title) {
-        this.title = title;
-    }
-
-
-
-    public Book(String title, String author) {
-        this.title = title;
-        this.author = author;
-    }
-
-    public Book(String title, String author, String isbn) {
-        this.title = title;
-        this.author = author;
-        this.isbn = isbn;
+    private Book() {
     }
 
     @Override
@@ -34,5 +17,35 @@ public class Book {
                 ", author='" + author + '\'' +
                 ", isbn='" + isbn + '\'' +
                 '}';
+    }
+
+    static public Builder builder(){
+        Builder builder = new Builder();
+        builder.book = new Book();
+        return builder;
+    }
+
+    public static class Builder{
+
+        private Book book;
+
+        public Builder title(String t){
+            book.title = t;
+            return this;
+        }
+
+        public Builder author(String a){
+            book.author = a;
+            return this;
+        }
+
+        public Builder isbn(String isbn){
+            book.isbn = isbn;
+            return this;
+        }
+
+        public Book build(){
+            return book;
+        }
     }
 }
