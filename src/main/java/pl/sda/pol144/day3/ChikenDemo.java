@@ -4,7 +4,7 @@ public class ChikenDemo {
     public static void main(String[] args) {
         Chiken chiken = new Chiken();
         final Chiken.Egg egg = chiken.makeEgg();
-        Chiken.Egg egg1 = chiken.new Egg();
+        Chiken.Egg egg1 = chiken.new Egg(); // nie mozna utworzyc obiektu Egg bez instancji klasy Chiken
 
     }
 }
