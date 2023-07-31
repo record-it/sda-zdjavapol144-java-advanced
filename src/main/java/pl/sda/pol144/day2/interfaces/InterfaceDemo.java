@@ -4,7 +4,7 @@ public class InterfaceDemo {
     public static void main(String[] args) {
         Flyable[] flyables = new Flyable[3];
         flyables[0] = new Wasp();
-        flyables[1] = new pl.sda.pol144.day2.interfaces.example.Airplane(4);
+        flyables[1] = new pl.sda.pol144.day2.interfaces.Airplane(4);
         flyables[2] = new Hydroplaine();
         for(var flyable: flyables){
             flyable.travel(10);

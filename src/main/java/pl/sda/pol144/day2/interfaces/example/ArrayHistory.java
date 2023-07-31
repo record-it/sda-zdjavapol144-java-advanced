@@ -1,6 +1,7 @@
 package pl.sda.pol144.day2.interfaces.example;
 // TODO klasa do poprawy, dorobić logikę dla przepełnienia tablicy!
 public class ArrayHistory implements History{
+
     private String[] content = new String[100];
     private int last = -1;
     @Override
