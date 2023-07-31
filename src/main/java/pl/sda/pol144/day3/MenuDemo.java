@@ -11,7 +11,17 @@ import java.util.Scanner;
 public class MenuDemo {
     public static void main(String[] args) {
         History history = new StringHistory();
-        Menu.MenuItem[] items = new Menu.MenuItem[3];
+        Menu.MenuItem[] items = new Menu.MenuItem[4];
+        items[3] = new Menu.MenuItem(
+                "O programie",
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        System.out.println("Autor programu:");
+                        System.out.println("Imię Nazwisko");
+                    }
+                }
+        );
         items[0] = new Menu.MenuItem(
                 "Dodaj do historii",
                 new Runnable() {
