@@ -1,8 +1,13 @@
 package pl.sda.pol144.day5;
 
-public class StringRepository<T> implements Repository<T, Integer>{
+public class ArrayRepository<T> implements Repository<T, Integer>{
     private int last = -1;
     private T[] items;
+
+    public ArrayRepository(T[] items) {
+        this.items = items;
+    }
+
     @Override
     public Integer save(T item) throws NoRoomInRespositoryException{
         if (last < items.length) {
