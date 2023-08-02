@@ -16,6 +16,7 @@ public class EnumMonetyDemo {
         var sum = 0.0;
         for(var value: values){
             sum += value.getValue();
+            System.out.println(value.ordinal());
         }
         System.out.println("Suma monet: " + sum);
         Scanner scanner = new Scanner(System.in);
