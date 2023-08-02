@@ -29,5 +29,6 @@ public class IteratorDemo {
         System.out.println(names);
     }
 }
+// next przesuwa iterator za następny element zapamiętując go
 // ->       ->
 //    "Ewa"    "Karol"   "Ania"   "Adam
