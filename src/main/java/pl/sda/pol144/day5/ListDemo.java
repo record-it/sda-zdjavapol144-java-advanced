@@ -1,7 +1,5 @@
 package pl.sda.pol144.day5;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,7 +13,7 @@ public class ListDemo {
         for(int i = 0; i < names.size(); i++){
             System.out.println(names.get(i));
         }
-        // lepije korzystać z foreach
+        // lepiej korzystać z foreach
         for(var name: names){
             System.out.println(name);
         }
