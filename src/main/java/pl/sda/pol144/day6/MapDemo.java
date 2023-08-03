@@ -1,6 +1,7 @@
 package pl.sda.pol144.day6;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MapDemo {
@@ -23,5 +24,20 @@ public class MapDemo {
             sum += player.points;
         }
         System.out.println("Suma punktów graczy: " + sum);
+        for(var entry: players.entrySet()){
+            System.out.println(entry.getKey() + ": " + entry.getValue().points);
+        }
+        // przykład zliczania wystąpień w liście
+        // wyniki przechowywane są w mapie
+        List<String> names = List.of("Adam", "Ewa", "Karol", "Ewa", "Tomek", "Ewa");
+        Map<String, Integer> counters = new HashMap<>();
+        for(var name: names){
+            if (counters.keySet().contains(name)){
+                int counter = counters.get(name);
+                counters.put(name, counter + 1);
+            }
+            counters.putIfAbsent(name, 1);
+        }
+        System.out.println(counters);
     }
 }
