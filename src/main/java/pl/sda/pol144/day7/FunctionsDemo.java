@@ -5,7 +5,7 @@ import java.util.function.*;
 
 public class FunctionsDemo {
     public static Supplier<String> randomName;
-    public static List<String> names;
+    public static List<String> names = List.of("Adam", "Ewa", "Ania", "Ola", "Karol");
     public static void main(String[] args) {
         /**
          * Funkcje
@@ -27,7 +27,7 @@ public class FunctionsDemo {
         Predicate<String> fiveLettersLong = s -> s.length() == 5;
         Predicate<Double> greaterThenFive = i -> i > 5;
         System.out.println(fiveLettersLong.test("Adam"));
-        names = List.of("Adam", "Ewa", "Ania", "Ola", "Karol");
+
         var aNames = filter(names, name -> name.startsWith("A"));
         System.out.println(aNames);
         // Stwórz listę imion trzyliterowych
