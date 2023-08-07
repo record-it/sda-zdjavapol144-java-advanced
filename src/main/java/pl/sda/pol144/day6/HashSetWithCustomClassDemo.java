@@ -42,6 +42,19 @@ class Player{
 }
 public class HashSetWithCustomClassDemo {
     public static void main(String[] args) {
+        /*
+            Przykład działania metody equals
+         */
+        Player player = new Player("Adam", 32);
+        System.out.println("Czy player jest równy 'Karol'? " + player.equals("Karol"));
+        Player playerOne = new Player("Ewa", 11);
+        System.out.println("Czy player jest równy playerOne? " + player.equals(playerOne));
+        System.out.println("Czy player jest równy sobie? " + player.equals(player));
+        Player playerTwo = new Player("Adam", 32);
+        System.out.println("Czy player jest równy playerTwo? " + player.equals(playerTwo));
+        /*
+           Przykład działania HashSet
+         */
         Set<Player> players = new HashSet<>();
         players.add(new Player("Adam", 10));
         players.add(new Player("Ewa", 15));
