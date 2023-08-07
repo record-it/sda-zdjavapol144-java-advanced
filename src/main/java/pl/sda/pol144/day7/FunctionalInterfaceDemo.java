@@ -14,7 +14,11 @@ public class FunctionalInterfaceDemo {
 
         Operation dodawanieLambda = (x, y) -> x + y;
         Operation odejmowanieLambda = (x, y) -> x - y;
+        dodawanie = (a, b) -> a * b;
         System.out.println(obliczDziałanie(dodawanieLambda, 5, 3));
+
+        OperationGeneric<Double> add = (a, b) -> a + b;
+        OperationGeneric<Integer> addInteger = (a, b) -> a + b;
     }
 
     public static double obliczDziałanie(Operation op, double a, double b){
