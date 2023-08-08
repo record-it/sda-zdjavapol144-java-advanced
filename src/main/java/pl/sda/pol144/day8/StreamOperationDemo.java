@@ -50,6 +50,8 @@ public class StreamOperationDemo {
                 .map(x -> "4. Imię o 5 znakach: " + x)
                 .orElse("4. Brak imienia o 5 znakach!");
         System.out.println(message);
+
+
     }
 
     public static Optional<String> findName(Predicate<String> pedicate){
