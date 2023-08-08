@@ -12,7 +12,6 @@ public class StreamDemo {
                 .map(name -> name.toUpperCase())    // operacja pośrednia
                 .sorted()
                 .forEach(name -> System.out.println(name)); // operacja terminalna
-
-
+        System.out.println(FunctionsDemo.names);
     }
 }

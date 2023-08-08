@@ -18,9 +18,11 @@ public class FunctionsDemo {
         System.out.println(calc.get("/").apply(12.0, 4.0));
 
         Function<Double, Double> sin = x -> Math.sin(x);
+        Function<Double, Double> sinRef = Math::sin;
         Function<Product, Double> mapToDouble = product -> product.bruttoPrice();
         // zapisz mapowanie łańcucha na jego długość
         Function<String, Integer> mapToLenght = s -> s.length();
+        Function<String, Integer> mapToLenghtRef = String::length;
         /**
          * Predykaty
          */
