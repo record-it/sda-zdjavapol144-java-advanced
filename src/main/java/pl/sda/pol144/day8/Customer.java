@@ -1,11 +1,7 @@
 package pl.sda.pol144.day8;
 
-import lombok.Getter;
-
 import java.time.LocalDate;
-import java.util.Locale;
 
-@Getter
 public class Customer implements Comparable<Customer>{
     long id;
 
