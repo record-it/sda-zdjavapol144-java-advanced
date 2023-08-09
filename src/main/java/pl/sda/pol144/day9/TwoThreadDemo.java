@@ -7,12 +7,13 @@ public class TwoThreadDemo {
         Scanner scanner = new Scanner(System.in);
         Thread thread = new Thread(() ->
         {
-            while(true){
+            while(!Thread.currentThread().isInterrupted()){
                 System.out.println("Hello");
+
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                    break;
                 }
             }
         }
@@ -22,6 +23,8 @@ public class TwoThreadDemo {
         // wątek main, obsługa zdarzeń
         while(true){
             if (scanner.next().equals("q")){
+                System.out.println("Quit");
+                thread.interrupt();
                 break;
             }
         }
