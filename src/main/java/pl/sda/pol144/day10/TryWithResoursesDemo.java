@@ -66,5 +66,6 @@ public class TryWithResoursesDemo {
         // blok try .. with .. resourses automatycznie zamyka zadeklarowane strumienie
         System.out.println("Sukces, udało się wczytać dane!");
         System.out.println(people);
+        System.out.println("KONIEC");
     }
 }
